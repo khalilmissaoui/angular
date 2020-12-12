@@ -1,0 +1,51 @@
+
+
+<div class="card-container">
+  <div class="card">
+    <div class="front">
+      <div class="cover">
+        <mat-icon>work</mat-icon>
+      </div>
+      <div class="user">
+        <img class="img-circle" src="assets/employe/{{user.id}}.jpg"/>
+      </div>
+      <div class="content">
+        <div class="main">
+          <h3 class="name">{{user.username}}</h3>
+          <p class="profession">{{user.profession}}</p>
+
+          <p class="text-center">{{user.email}}</p>
+        </div>
+        <div class="footer">
+          <div class="rating">
+            <label>ESPRIT : Ecole Sup Privée d'Ingénierie et de Technologies friends
+              <mat-icon inline>account_balance</mat-icon></label>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end front panel -->
+    <div class="back">
+      <div class="header">
+        <h5 class="motto">Plus de Detail</h5>
+      </div>
+      <div class="content">
+        <div class="main">
+          <h4 class="text-center">Description</h4>
+          <p class="text-center">{{user.description}}</p>
+        </div>
+      </div>
+      <div class="footer">
+
+          <button mat-flat-button color="primary" (click)="ModifierUser()">Modifier Cette Person</button>
+      <button mat-mini-fab style="margin-left: 10px" color="warn" (click)="deleteUser()">
+        <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div> <!-- end back panel -->
+  </div> <!-- end card -->
+</div> <!-- end card-container -->
+
+
+
+
+

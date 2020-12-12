@@ -1,0 +1,29 @@
+
+<div class="form__group field input-rechercher">
+  <input [(ngModel)]="filterAtt"  [ngStyle]="{
+  'color':Color
+  }" type="input" class="form__field input-rechercher" placeholder="Name" name="name" id='name' required />
+  <label for="name" class="form__label input-rechercher">Rechercher</label>
+</div>
+
+<div class="background">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <app-list-employee [filterAtt]="filterAtt" (selected)="toggle($event)" (founded)="RechercheColor($event)"></app-list-employee>
+      </div>
+      <div class="col-md-6">
+        <app-detail-employee *ngIf="activated"></app-detail-employee>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="add()" color="primary" mat-raised-button [ngStyle]="{
+  'width':'259px', 'marginLeft' : '50px'
+  }"><i class="fa fa-plus"></i>  add user</button>
+
+</div>
+
+<input [(ngModel)]="filterAtt"  [ngStyle]="{
+  'color':Color
+  }" hidden>

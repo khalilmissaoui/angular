@@ -1,0 +1,62 @@
+<h2 class="head">Remplir le formulaire ci-dessous pour ajouter un utilisateur</h2>
+
+<form  [formGroup]="userForm">
+
+
+  <br>
+  <label>
+    Email:
+    <input type="email" formControlName="email" class="form-control" [(ngModel)]="user.email"  placeholder="name@example.com" >
+    <div *ngIf="email.errors && email.touched">
+      <div class="alert-danger" *ngIf="name.errors.required">this is required</div>
+    </div>
+  </label>
+  <br>
+
+
+  <label>
+    username:
+    <input type="text" formControlName="username" [(ngModel)]="user.username" class="form-control" >
+    <div *ngIf="name.errors && name.touched">
+      <div class="alert-danger" *ngIf="name.errors.required">this is required</div>
+    </div>
+  </label>
+
+
+  <br>
+  <label>
+    password:
+    <input type="text" formControlName="password" [(ngModel)]="user.password" class="form-control" >
+    <div *ngIf="password.errors && password.touched">
+      <div class="alert-danger"  *ngIf="password.errors.required">this is required</div>
+      <div class="alert-danger"  *ngIf="password.errors.minlength">minlength for password is 8</div>
+    </div>
+  </label>
+
+  <br>
+  <label for="sel1" >Select list:</label>
+  <select  formControlName="profession" style="width: 210px" id="sel1" #seleted (click)="log(seleted.value)" class="form-control">
+    <option>Administrateur</option>
+    <option selected>Professeur</option>
+    <option>Directeur</option>
+    <option>Manager</option>
+  </select>
+
+
+
+  <br>
+  <label>
+    description:
+    <textarea type="text" formControlName="description" [(ngModel)]="user.description" class="form-control"
+              placeholder="description"></textarea>
+  </label>
+
+
+</form>
+<br>
+
+ <button  class="btn btn-primary"
+[disabled]="!userForm.valid"  style="margin-left: 50px"  (click)="adduser()" >ajouter</button>
+
+
+

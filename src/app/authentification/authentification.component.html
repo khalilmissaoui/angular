@@ -1,0 +1,52 @@
+
+<div class="container-fluid">
+  <div class="row rowrow">
+
+    <form #formulaire="ngForm">
+
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Username
+            <i  style="margin-left: 5px" class="fa fa-user"></i>
+
+          </span>
+        </div>
+        <input type="text" class="form-control"
+               name="username" required
+               [(ngModel)]="username"  #name="ngModel"
+               aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <div *ngIf="name.errors && name.touched" class="alert-danger"> Name is required. </div>
+
+      <br>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm2">Password
+            <i style="margin-left: 5px" class="fa fa-key"></i></span>
+        </div>
+        <input type="password" class="form-control"
+               name="password" required
+               [(ngModel)]="password" #t="ngModel"
+               aria-label="Small" aria-describedby="inputGroup-sizing-sm2">
+      </div>
+
+      <div *ngIf="t.errors && t.touched" class="alert-danger"> Name is required. </div>
+
+    </form>
+
+  </div>
+<div class="row">
+  <br>
+  <button [disabled]="formulaire.invalid" (click)="auth()" class="buttonlog btn-dark btn">LOGIN IN</button>
+
+</div>
+</div>
+
+
+
+
+
+
+

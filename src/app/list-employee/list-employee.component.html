@@ -1,0 +1,11 @@
+
+<div style="margin-top: 20px"></div>
+<div *ngFor="let user of filtredlist">
+  <ul>
+    <li>
+      <app-employee (selected)="getperson($event)"  [user]="user"></app-employee>
+    </li>
+  </ul>
+</div>
+
+

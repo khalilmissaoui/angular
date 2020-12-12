@@ -1,0 +1,11 @@
+
+
+<mat-list >
+  <mat-list-item class="mat-elevation-z2 blur" (click)="selectPersonne()">
+    <mat-icon matListIcon><img src="assets/employe/{{user.id}}.jpg" alt="none"></mat-icon>
+    <h3 mat-line>{{user.username}}</h3>
+    <p [ngStyle]="{'color':'red'}" mat-line>{{user.profession}}</p>
+  </mat-list-item>
+</mat-list>
+
+
