@@ -17,7 +17,9 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
 
     this.userForm = new FormGroup({
-      email : new FormControl('' , Validators.required),
+      email : new FormControl('' ,
+        Validators.compose([Validators.required,Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+        ])),
       username : new FormControl('',
        Validators.compose([Validators.required,Validators.minLength(3)])),
       password : new FormControl('',

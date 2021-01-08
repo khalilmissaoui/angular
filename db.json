@@ -18,26 +18,10 @@
   },
   "users": [
     {
-      "email": "khalilmissaoui@gmail.com",
-      "username": "khalil",
-      "password": "missaouikk",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-      "profession": "Administrateur",
-      "id": 1
-    },
-    {
-      "email": "samaia@email.com",
-      "username": "samia",
-      "password": "alalalallalalal",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-      "profession": "Professeur",
-      "id": 2
-    },
-    {
-      "email": "oussema@IEEE.com",
-      "username": "oussema",
-      "password": "passwoesks",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+      "email": "workshop@workshop.com",
+      "username": "workshop@workshop.com",
+      "password": "workshop@workshop.com",
+      "description": "workshop@workshop.com",
       "profession": "Manager",
       "id": 3
     }

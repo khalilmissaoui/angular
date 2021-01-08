@@ -8,7 +8,8 @@
     Email:
     <input type="email" formControlName="email" class="form-control" [(ngModel)]="user.email"  placeholder="name@example.com" >
     <div *ngIf="email.errors && email.touched">
-      <div class="alert-danger" *ngIf="name.errors.required">this is required</div>
+      <div class="alert-danger" *ngIf="email.errors.required">this is required</div>
+      <div class="alert-danger" *ngIf="email.errors.pattern">email not valid</div>
     </div>
   </label>
   <br>

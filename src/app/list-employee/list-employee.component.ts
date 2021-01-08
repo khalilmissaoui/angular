@@ -23,7 +23,7 @@ export class ListEmployeeComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
         console.log(this.filterAtt);
-   this.filter2();
+   this.filter();
     }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class ListEmployeeComponent implements OnInit, OnChanges {
     this.selected.emit(this.x);
   }
 
-filter2(){
+filter(){
   if(this.filterAtt !='') {
     this.filtredlist = this.listusers.filter(
       user =>{ if((user.username.toLocaleLowerCase()).includes(this.filterAtt.toLocaleLowerCase())){

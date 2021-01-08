@@ -1,5 +1,5 @@
 <h2 class="head">Remplir le formulaire ci-dessous pour Modifier {{user.username}}</h2>
-
+<div style="margin-left: 23px"><p style="color: red">remarque : il faut remplir tout les champs pour avoir le button de modification</p></div>
 <div class="lol">
 
 
@@ -59,7 +59,7 @@
   <br>
 
 <button  class="btn btn-primary" style="margin-left: 50px"
-         [disabled]="!userForm.valid" (click)="modifierUser()" >Modifier</button>
+         *ngIf="userForm.valid" (click)="modifierUser()" >Modifier</button>
 
 
 
